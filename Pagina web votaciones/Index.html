@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistema de Votación</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Sistema de Votación para Representante</h1>
+
+    <!-- Registro de Aspirantes -->
+    <section id="registro-aspirantes">
+      <h2>Registro de Aspirantes</h2>
+      <form id="aspiranteForm">
+        <input type="text" id="nombreAspirante" placeholder="Nombre del aspirante" required />
+        <input type="text" id="propuestaAspirante" placeholder="Propuesta del aspirante" required />
+        <input type="file" id="fotoAspirante" accept="image/*" required />
+        <button type="submit">Registrar Aspirante</button>
+      </form>
+      <button id="iniciarVotacion">Iniciar Votación</button>
+    </section>
+
+    <!-- Votación -->
+    <section id="votacion" style="display:none;">
+      <h2>Votación</h2>
+      <form id="votanteForm">
+        <input type="text" id="nombreVotante" placeholder="Nombre del votante" required />
+        <input type="text" id="cursoVotante" placeholder="Curso" required />
+        <input type="text" id="codigoEstudiantil" placeholder="Código estudiantil (6 dígitos)" required maxlength="6" />
+        <div id="candidatosContainer"></div>
+        <button type="submit">Votar</button>
+      </form>
+    </section>
+
+    <!-- Resultados -->
+    <section id="resultados">
+      <h2>Resultados en Tiempo Real</h2>
+      <ul id="listaResultados"></ul>
+      <h3 id="probableGanador">Aún no hay votos registrados.</h3>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
