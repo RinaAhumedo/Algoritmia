@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculadora de Arroz</title>
+  <link rel="stylesheet" href="styles.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1>Calculadora de Arroz y Agua</h1>
+    
+    <div class="input-group">
+      <label for="cantidad">Cantidad deseada (en tazas o libras):</label>
+      <input type="number" id="cantidad" min="0" step="any" />
+    </div>
+
+    <div class="input-group">
+      <label for="tipo">¿Qué estás especificando?</label>
+      <select id="tipo">
+        <option value="tazas">Tazas de arroz</option>
+        <option value="libras">Libras de arroz</option>
+      </select>
+    </div>
+
+    <button onclick="calcular()">Calcular</button>
+
+    <div id="resultado"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
