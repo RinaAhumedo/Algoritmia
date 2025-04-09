@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Generador de Grupos</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Generador de Grupos</h1>
+    <input type="file" id="fileInput" accept=".csv, .xlsx" />
+    <p id="message"></p>
+    <button id="resetBtn" style="display: none;">Cargar Otro Archivo</button>
+
+    <h2>Lista de Estudiantes</h2>
+    <ul id="studentList"></ul>
+
+    <h2>Grupos Generados</h2>
+    <div id="groups"></div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/xlsx/dist/xlsx.full.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
